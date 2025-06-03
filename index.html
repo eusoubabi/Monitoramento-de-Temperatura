@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <title>Monitor de Temperatura</title>
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      width: 100%;
+      background: #111;
+      font-family: 'Arial Black', sans-serif;
+    }
+
+    .container {
+      background: black;
+      border: 10px solid green;
+      width: 100vw;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      box-sizing: border-box;
+      color: green;
+      text-align: center;
+    }
+
+    .temp {
+      font-size: 8vw;
+    }
+
+    .message {
+      font-size: 2vw;
+      margin-top: 2vh;
+    }
+
+    .green { color: green; border-color: green; }
+    .blue  { color: blue;  border-color: blue; }
+    .red   { color: red;   border-color: red; }
+  </style>
+</head>
+<body>
+  <div class="container green" id="monitor">
+    <div style="font-size: 2vw;">MONITOR DE TEMPERATURA<br>ENGENHARIA DA COMPUTAÇÃO 6º PERIODO</div>
+    <div class="temp" id="temp">--°C</div>
+    <div class="message" id="message">Aguardando dados...</div>
+  </div>
+
+  <script>
+    const socket = new WebSocket('ws://localhost:8080');
+    socket.onmessage = function (event) {
+      const temp = parseFloat(event.data);
+      const monitor = document.getElementById('monitor');
+      const tempDisplay = document.getElementById('temp');
+      const message = document.getElementById('message');
+
+      tempDisplay.textContent = `${temp.toFixed(2)}°C`;
+      monitor.classList.remove('green', 'red', 'blue');
+
+      if (temp < 30) {
+        monitor.classList.add('blue');
+        message.textContent = 'Temperatura abaixo do ideal.';
+      } else if (temp <= 37.5) {
+        monitor.classList.add('green');
+        message.textContent = 'Temperatura normal. Tudo está bem.';
+      } else {
+        monitor.classList.add('red');
+        message.textContent = 'Alerta! Temperatura elevada (febre).';
+      }
+    };
+  </script>
+</body>
+</html>
