@@ -1,9 +1,10 @@
-# 🌡️ Monitoramento de Temperatura em Tempo Real com Arduino e WebSocket
+# 🌡️ Monitoramento de Temperatura em Tempo Real com Arduino e WebSocket 
 
 ![GitHub repo size](https://img.shields.io/github/repo-size/eusoubabi/Monitoramento-de-Temperatura?style=for-the-badge)
 ![GitHub language count](https://img.shields.io/github/languages/count/eusoubabi/Monitoramento-de-Temperatura?style=for-the-badge)
 ![GitHub forks](https://img.shields.io/github/forks/eusoubabi/Monitoramento-de-Temperatura?style=for-the-badge)
 ![GitHub pull requests](https://img.shields.io/github/issues-pr/eusoubabi/Monitoramento-de-Temperatura?style=for-the-badge)
+![Status](https://img.shields.io/badge/Status-Finalizado-brightgreen?style=for-the-badge)
 
 <img src="sensor.jpg" alt="Imagem do projeto em funcionamento">
 
