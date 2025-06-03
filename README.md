@@ -5,7 +5,7 @@
 ![GitHub forks](https://img.shields.io/github/forks/eusoubabi/Monitoramento-de-Temperatura?style=for-the-badge)
 ![GitHub pull requests](https://img.shields.io/github/issues-pr/eusoubabi/Monitoramento-de-Temperatura?style=for-the-badge)
 
-<img src="imagem.png" alt="Imagem do projeto em funcionamento">
+<img src="sensor.jpg" alt="Imagem do projeto em funcionamento">
 
 > Projeto desenvolvido como atividade prática da disciplina de **Sistemas Digitais para Computadores**, com o objetivo de monitorar temperatura em tempo real com Arduino. Foi o primeiro contato com Arduino para alguns integrantes do grupo, inclusive para mim.
 
